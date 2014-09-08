@@ -1,0 +1,267 @@
+\documentclass[h]{article}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{amsfonts}
+\title{CS 2050 Homework 2}
+\date{January 22nd, 2014}
+\author{Hemen Shah \\ Section B1 \\ Grading TA: Akshay}
+
+
+\begin{document}
+
+\maketitle
+
+\section*{1.2 \#20}
+
+A says The two of us are both knights.\newline
+B says A is a knave.\newline
+p: A is knight\newline 
+q: B is a knight\newline
+\begin{tabular}{|c c|}\hline
+(p $\rightarrow$ (p $\wedge$ q)) $\wedge$ ($\neg$p $\rightarrow$ $\neg$(p $\wedge$ q)) $\wedge$ (q $\rightarrow$ $\neg$p) $\wedge$ ($\neg$q $\rightarrow$ $\neg \neg$p) & given\\ 
+(p $\rightarrow$ (p $\wedge$ q)) $\wedge$ ($\neg$p $\rightarrow$ ($\neg$p $\vee$ $\neg$q)) $\wedge$ (q $\rightarrow$ $\neg$p) $\wedge$ ($\neg$q $\rightarrow$ $\neg \neg$p) & demorgans \\ 
+(p $\rightarrow$ (p $\wedge$ q)) $\wedge$ ($\neg$p $\rightarrow$ ($\neg$p $\vee$ $\neg$q)) $\wedge$ (q $\rightarrow$ $\neg$p) $\wedge$ ($\neg$q $\rightarrow$ p) & double negation\\ 
+($\neg$p $\vee$ (p $\wedge$ q)) $\wedge$ ($\neg$p $\rightarrow$ ($\neg$p $\vee$ $\neg$q)) $\wedge$ (q $\rightarrow$ $\neg$p) $\wedge$ ($\neg$q $\rightarrow$ p) & material implication\\ 
+($\neg$p $\vee$ (p $\wedge$ q)) $\wedge$ ($\neg \neg$p $\vee$ ($\neg$p $\vee$ $\neg$q)) $\wedge$ (q $\rightarrow$ $\neg$p) $\wedge$ ($\neg$q $\rightarrow$ p) & material implication\\ 
+($\neg$p $\vee$ (p $\wedge$ q)) $\wedge$ (p $\vee$ ($\neg$p $\vee$ $\neg$q)) $\wedge$ (q $\rightarrow$ $\neg$p) $\wedge$ ($\neg$q $\rightarrow$ p) & double negation\\ 
+($\neg$p $\vee$ (p $\wedge$ q)) $\wedge$ (p $\vee$ ($\neg$p $\vee$ $\neg$q)) $\wedge$ ($\neg $q $\vee$ $\neg$p) $\wedge$ ($\neg$q $\rightarrow$ p) & material implication\\ 
+($\neg$p $\vee$ (p $\wedge$ q)) $\wedge$ (p $\vee$ ($\neg$p $\vee$ $\neg$q)) $\wedge$ ($\neg $q $\vee$ $\neg$p) $\wedge$ ($\neg \neg$q $\vee$ p) & material implication\\ 
+($\neg$p $\vee$ (p $\wedge$ q)) $\wedge$ (p $\vee$ ($\neg$p $\vee$ $\neg$q)) $\wedge$ ($\neg $q $\vee$ $\neg$p) $\wedge$ (q $\vee$ p) & double negation\\
+($\neg$p $\vee$ (p $\wedge$ q)) $\wedge$ ((p $\vee$ $\neg$p) $\vee$ $\neg$q) $\wedge$ ($\neg $q $\vee$ $\neg$p) $\wedge$ (q $\vee$ p) & associative \\ 
+($\neg$p $\vee$ (p $\wedge$ q)) $\wedge$ (T $\vee$ $\neg$q) $\wedge$ ($\neg $q $\vee$ $\neg$p) $\wedge$ (q $\vee$ p) & negation law \\ 
+($\neg$p $\vee$ (p $\wedge$ q)) $\wedge$ (T) $\wedge$ ($\neg $q $\vee$ $\neg$p) $\wedge$ (q $\vee$ p) & domination \\ 
+($\neg$p $\vee$ (p $\wedge$ q)) $\wedge$ ($\neg $q $\vee$ $\neg$p) $\wedge$ (q $\vee$ p) & identity \\ 
+(($\neg$p $\vee$ p)$\wedge$ ($\neg$p $\vee$ q)) $\wedge$ ($\neg $q $\vee$ $\neg$p) $\wedge$ (q $\vee$ p) & distributive \\
+((p $\vee$ $\neg$p)$\wedge$ ($\neg$p $\vee$ q)) $\wedge$ ($\neg $q $\vee$ $\neg$p) $\wedge$ (q $\vee$ p) & commutative \\
+((T)$\wedge$ ($\neg$p $\vee$ q)) $\wedge$ ($\neg $q $\vee$ $\neg$p) $\wedge$ (q $\vee$ p) & domination \\
+(($\neg$p $\vee$ q)$\wedge$ (T)) $\wedge$ ($\neg $q $\vee$ $\neg$p) $\wedge$ (q $\vee$ p) & commutative \\
+($\neg$p $\vee$ q) $\wedge$ ($\neg $q $\vee$ $\neg$p) $\wedge$ (q $\vee$ p) & identity \\
+($\neg$p $\vee$ q) $\wedge$ ($\neg $p $\vee$ $\neg$q) $\wedge$ (q $\vee$ p) & commutiative \\
+($\neg$p $\wedge$ (q $\vee$ $\neg$q)) $\wedge$ (q $\vee$ p) & distributive \\
+($\neg$p $\wedge$ T) $\wedge$ (q $\vee$ p) & negation law \\
+$\neg$p $\wedge$ (q $\vee$ p) & identity  \\
+($\neg$p $\wedge$ q) $\vee$($\neg$p $\wedge$p) & distributive  \\
+($\neg$p $\wedge$ q) $\vee$(p $\wedge$ $\neg$p) & commutative  \\
+($\neg$p $\wedge$ q) $\vee$ F & negation law  \\
+$\neg$p $\wedge$ q & identity  \\ \hline
+\end{tabular}\newline \newline
+LADBAP - A is knave B is knight
+
+\section*{1.2 \#22}
+A says A is a knight \newline
+B says B is a knight \newline
+p: A is a knight \newline
+q: B is a knight \newline
+\begin{tabular}{|c c|} \hline
+$(p \rightarrow p) \wedge (\neg p \rightarrow \neg p) \wedge (q \rightarrow q) \wedge (\neg q \rightarrow \neg q)$ & given\\
+$(\neg p \vee p) \wedge (\neg p \rightarrow \neg p) \wedge (q \rightarrow q) \wedge (\neg q \rightarrow \neg q)$ & material implication\\
+$(\neg p \vee p) \wedge (\neg \neg p \vee \neg p) \wedge (q \rightarrow q) \wedge (\neg q \rightarrow \neg q)$ & material implication\\
+$(\neg p \vee p) \wedge (\neg \neg p \vee \neg p) \wedge (\neg q \vee q) \wedge (\neg q \rightarrow \neg q)$ & material implication\\
+$(\neg p \vee p) \wedge (\neg \neg p \vee \neg p) \wedge (\neg q \vee q) \wedge (\neg \neg q \vee \neg q)$ & material implication\\
+$(\neg p \vee p) \wedge ( p \vee \neg p) \wedge (\neg q \vee q) \wedge (\neg \neg q \vee \neg q)$ & double negation\\
+$(\neg p \vee p) \wedge ( p \vee \neg p) \wedge (\neg q \vee q) \wedge (q \vee \neg q)$ & double negation\\
+$( p \vee \neg p) \wedge ( p \vee \neg p) \wedge (\neg q \vee q) \wedge (q \vee \neg q)$ & commutative\\
+$( p \vee \neg p) \wedge ( p \vee \neg p) \wedge (q \vee \neg q) \wedge (q \vee \neg q)$ & commutative\\
+$T \wedge ( p \vee \neg p) \wedge (q \vee \neg q) \wedge (q \vee \neg q)$ & negation law\\
+$T \wedge T \wedge (q \vee \neg q) \wedge (q \vee \neg q)$ & negation law\\
+$T \wedge T \wedge T \wedge (q \vee \neg q)$ & negation law\\
+$T \wedge T \wedge T \wedge T$ & negation law\\
+$T \wedge T \wedge T$ & idempotent\\
+$T \wedge T$ & idempotent\\
+$T$ & idempotent\\ \hline
+\end{tabular} \newline \newline
+LADBAP - We don't know anything about either of them. Their being a knight or a knave does not change the truth value
+
+\section*{1.3 \#4}
+a.\newline
+\begin{tabular}{|c|c|c|c|c|c|c|} \hline
+p & q & r & (p $\vee$ q) &(p $\vee$ q) $\vee$ r& (q $\vee$ r) & p $\vee$ (q $\vee$ r)\\ \hline
+T & T & T & T & T & T & T\\ \hline
+T & T & F & T & T & T & T\\ \hline
+T & F & T & T & T & T & T\\ \hline
+T & F & F & T & T & F & T\\ \hline
+F & T & T & T & T & T & T\\ \hline
+F & T & F & T & T & T & T\\ \hline
+F & F & T & F & T & T & T\\ \hline
+F & F & F & F & F & F & F\\ \hline
+
+\end{tabular}\newline \newline
+The columns for $(p \vee q) \vee r$ and $p \vee (q \vee r)$ match exactly and so are equivalent
+
+\section*{1.3 \#8}
+a. Kwame will take a job in industry or go to graduate school\newline
+i: Kwame will take a job in industry \newline
+g: Kwame will go to graduate school\newline
+$\neg(i \vee g) \newline
+\neg i \wedge \neg g $ \newline
+Kwame will not take a job in industry and he will not go to graduate school
+\newline \newline
+b. Yoshiko knows Java and calculus\newline
+j: Yoshiko knows Java\newline 
+c: Yoshiko knows calculus\newline
+$\neg (j \wedge c) \newline
+\neg j \vee \neg c \newline$
+Yoshiko does not know either Java or calculus or both.
+\newline \newline
+c. James is young and strong\newline
+y: James is young \newline
+s: James is strong \newline
+$ \neg (y \wedge s)\newline
+\neg y \vee \neg s \newline$
+James is not young or not strong or not both
+\newline \newline
+d. Rita will move to Oregon or Washington\newline
+o: Rita will move to Oregon \newline
+w: Rita will move to Washington\newline
+$ \neg (o \vee w)\newline
+\neg o \wedge \neg w \newline $
+Rita will not move to Oregon and Washington
+
+\section*{1.3 \#10}
+Tautology by truth tables\newline
+$[p \wedge (p \rightarrow q)] \rightarrow q $\newline
+\begin{tabular}{|c|c|c|c|c|}\hline
+p & q & $p \rightarrow q$ & $p \wedge (p \rightarrow q)$ & $[p \wedge (p \rightarrow q)] \rightarrow q $\\ \hline
+T & T & T & T & T\\ \hline
+T & F & F & F & T\\ \hline
+F & T & T & T & T\\ \hline
+F & F & T & T & T\\ \hline
+\end{tabular}
+\newline \newline
+$[(p \vee q) \wedge (p \rightarrow r) \wedge (q \rightarrow r)] \rightarrow r$\newline
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|} \hline
+p & q & r & $(p \vee q)$ & $(p \rightarrow r)$ & $(q \rightarrow r)$ & $(p \vee q) \wedge (p \rightarrow r)$ & $(p \vee q) \wedge (p \rightarrow r) \wedge (q \rightarrow r)$ & $[(p \vee q) \wedge (p \rightarrow r) \wedge (q \rightarrow r)] \rightarrow r$ \\ \hline
+T & T & T & T & T & T & T & T & T\\ \hline
+T & T & F & T & F & F & F & F & T\\ \hline
+T & F & T & T & T & T & T & T & T\\ \hline
+T & F & F & T & F & T & F & F & T\\ \hline
+F & T & T & T & T & T & T & T & T\\ \hline
+F & T & F & T & T & F & T & F & T\\ \hline
+F & F & T & F & T & T & F & F & T\\ \hline
+F & F & F & F & T & T & F & F & T\\ \hline
+\end{tabular}
+
+\section*{1.3 \#12}
+Prove tautology by logical equivalence\newline
+$[p \wedge (p \rightarrow q)] \rightarrow q $\newline
+\begin{tabular}{|c c|}\hline
+$[p \wedge (p \rightarrow q)] \rightarrow q $ & given \\ 
+$[p \wedge (\neg p \vee q)] \rightarrow q $ & material implication \\
+$\neg [p \wedge (\neg p \vee q)] \vee q $ & material implication \\
+$ [\neg p \vee \neg (\neg p \vee q)] \vee q $ & demorgans \\
+$ [\neg p \vee  (\neg \neg p \wedge \neg q)] \vee q $ & demorgans \\
+$ [\neg p \vee  (p \wedge \neg q)] \vee q $ & double negation \\
+$ [(\neg p \vee p) \wedge(\neg p \vee \neg q)] \vee q $ & distributive \\
+$ [(T) \wedge(\neg p \vee \neg q)] \vee q $ & negation law \\
+$ [(\neg p \vee \neg q) \wedge T] \vee q $ & commutative \\
+$ [\neg p \vee \neg q] \vee q $ & identity \\
+$ \neg p \vee [\neg q \vee q]$ & associative \\
+$ \neg p \vee T $ & negation law \\
+$ T $ & domination \\ \hline
+\end{tabular}
+\newline \newline
+LADBAP - This thing even looks a little like an arrow looking down. That is how BA this P is. True means that this is a tautology
+ \newline \newline
+$[(p \vee q) \wedge (p \rightarrow r) \wedge (q \rightarrow r)] \rightarrow r$\newline
+\begin{tabular}{|c c|}\hline
+$[(p \vee q) \wedge (p \rightarrow r) \wedge (q \rightarrow r)] \rightarrow r$ & given \\
+$[(p \vee q) \wedge (\neg p \vee r) \wedge (q \rightarrow r)] \rightarrow r$ & material implication \\
+$[(p \vee q) \wedge (\neg p \vee r) \wedge (\neg q \vee r)] \rightarrow r$ & material implication \\
+$\neg [(p \vee q) \wedge (\neg p \vee r) \wedge (\neg q \vee r)] \vee r$ & material implication \\
+$[\neg (p \vee q) \vee \neg (\neg p \vee r) \vee \neg (\neg q \vee r)] \vee r$ & demorgans \\
+$[ (\neg p \wedge \neg q) \vee  (\neg\neg p \wedge \neg r) \vee \neg (\neg q \vee r)] \vee r$ & demorgans \\
+$[ (\neg p \wedge \neg q) \vee  (\neg\neg p \wedge \neg r) \vee  (\neg \neg q \wedge \neg r)] \vee r$ & demorgans \\
+$[ (\neg p \wedge \neg q) \vee  (p \wedge \neg r) \vee  (\neg \neg q \wedge \neg r)] \vee r$ & double negation \\
+$[ (\neg p \wedge \neg q) \vee  (p \wedge \neg r) \vee  (q \wedge \neg r)] \vee r$ & double negation \\
+$[ (\neg p \wedge \neg q) \vee  (\neg r \wedge p) \vee  (q \wedge \neg r)] \vee r$ & commutative \\
+$ [(\neg p \wedge \neg q) \vee  (\neg r \wedge p) \vee  (\neg r \wedge q) ]\vee r$ & commutative \\
+$ [(\neg p \wedge \neg q) \vee  (\neg r \wedge(p \vee q))] \vee r$ & distributive \\
+$ r \vee [(\neg p \wedge \neg q) \vee (\neg r \wedge(p \vee q))]$ & commutative \\
+$ [r \vee (\neg p \wedge \neg q)] \vee (\neg r \wedge(p \vee q))$ & associative \\
+$ [r \vee (\neg p \wedge \neg q)] \vee \neg [r \vee \neg(p \vee q)]$ & demorgans  \\
+$ [r \vee (\neg p \wedge \neg q)] \vee \neg[ r \vee (\neg p \wedge \neg q)]$ & demorgans \\
+$ T $ & negation law \\\hline
+\end{tabular}\newline
+LADBAP - in the second to last line the things  in the brackets were the same. This allowed me to get a true using the negation law which means that the statement is tautologous.
+
+\section*{1.3 \#14}
+prove that $(\neg p \wedge (p \rightarrow q)) \rightarrow \neg q$ is a tautology \newline
+\begin{tabular}{|c c|}\hline
+$(\neg p \wedge (p \rightarrow q)) \rightarrow \neg q$ & given \\
+$(\neg p \wedge (\neg p \vee q)) \rightarrow \neg q$ & material implication \\
+$\neg (\neg p \wedge (\neg p \vee q)) \vee \neg q$ & material implication \\
+$ (\neg \neg p \vee \neg (\neg p \vee q)) \vee \neg q$ & demorgans \\
+$ (\neg \neg p \vee  (\neg \neg p \wedge q)) \vee \neg q$ & demorgans \\
+$ ( p \vee  (\neg \neg p \wedge q)) \vee \neg q$ & double negation \\
+$ ( p \vee  (p \wedge q)) \vee \neg q$ & double negation \\
+$ ( (p \vee p) \wedge (p \vee q)) \vee \neg q$ & distributive \\
+$ ( (T) \wedge (p \vee q)) \vee \neg q$ & idempotent \\
+$ ( (p \vee q) \wedge T) \vee \neg q$ & commutative \\
+$ ( p \vee q) \vee \neg q$ & identity \\
+$  p \vee (q \vee \neg q)$ & associative \\
+$  p \vee T$ & negation \\
+$  T $ & domination \\ \hline
+\end{tabular}
+\newline
+LADBAP - ended up with true so tautology
+
+\section*{1.3 \#22}
+show that $(p \rightarrow q) \wedge (p \rightarrow r)$ and $p \rightarrow (q \wedge r)$ are logically equivalent \newline
+\begin{tabular}{|c c|}\hline
+$(p \rightarrow q) \wedge (p \rightarrow r)$ & given\\
+$(\neg p \vee q) \wedge (p \rightarrow r)$ & material implication\\
+$(\neg p \vee q) \wedge (\neg p \vee r)$ & material implication\\
+$\neg p \vee (q \wedge r)$ & distributive\\
+$p \rightarrow (q \wedge r)$ & material implication\\ \hline
+\end{tabular}
+\newline
+LADBAP - the last statement matches the second statement in the question exactly so the two statements are logically equivalent
+
+\section*{1.4 \#6}
+Let N(x) be the statement â€œx has visited North Dakota,â€ where the domain consists of the students in your school.\newline
+a. There exists a student who has visited North Carolina\newline
+b. Every student has visited North Carolina.\newline
+e. Not all students have visited North Carolina\newline
+f. Every student has not visited North Carolina\newline
+
+\section*{1.4 \#10}
+\begin{enumerate}
+\item[a.] $\exists x(C(x) \wedge D(x) \wedge F(x))$
+\item[b.] $\forall x(C(x) \vee D(x) \vee F(x))$
+\item[c.] $\exists x(C(x) \wedge \neg D(x) \wedge F(x))$
+\item[d.] $\forall x \neg (C(x) \wedge D(x) \wedge F(x))$
+\item[e.] $\exists xC(x) \wedge \exists xD(x) \wedge \exists xF(x)$
+\end{enumerate}
+
+\section*{1.4 \#32}
+\begin{enumerate}
+\item[a.] $\forall d F(d)$ d $\in $ all dogs and F(d): d has fleas\newline
+$\neg (\forall d F(d))$\newline
+$\exists d \neg F(d)$ using demorgans\newline
+There exists a dog that does not have fleas
+\item[b.] $\exists h A(h)$ h $\in$ all horses and A(h): h can add\newline
+$\neg (\exists h A(h))$\newline
+$\forall h \neg A(h)$ using demorgans\newline
+All horses can not add
+\item[d.] $\forall m \neg F(m)$ m $\in$ monkeys and F(m): m can speak French  \newline
+$\neg (\forall m \neg F(m))$\newline
+$\exists m \neg \neg F(m))$ using demorgans\newline
+$\exists m F(m))$ using double negation\newline
+There exists a monkey that can speak french
+\end{enumerate}
+
+\section*{1.4 \#62}
+a. $\forall x ( P(x) \rightarrow \neg S(x))$\newline
+b. $\forall x ( R(x) \rightarrow S(x))$ \newline
+c. $\forall x ( Q(x) \rightarrow P(x))$ \newline
+d. $\forall x ( Q(x) \rightarrow \neg R(x))$ \newline
+e.
+\newline
+$\neg P \vee \neg S$ - material implication from a \newline
+$\neg R \vee S$ - material implication from b \newline
+$\neg Q \vee P$ - material implication from c \newline
+$\neg P \vee \neg R$ - 1 and 2 resolution\newline
+$\neg Q \vee \neg R$ - 3 and 4 resolution
+\newline \newline
+it matches the material implcation from d - ( $\neg Q \vee \neg R$ )
+so it is a correct conclusion
+\end{document}
