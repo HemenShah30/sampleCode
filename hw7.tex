@@ -1,0 +1,157 @@
+\documentclass[h]{article}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{amsfonts}
+\usepackage{program}
+\title{CS 2050 Homework 7}
+\date{March 5, 2014}
+\author{Hemen Shah \\ Section B1 \\ Grading TA: Akshay}
+
+\begin{document}
+
+\maketitle
+
+\section*{5.1 \#2}
+Because the basis step is told to be true and the inductive step is told to be true, by the principle of mathematical induction, we know that the golfer plays every hole on the course
+
+\section*{5.1 \#4}
+a. P(1): $\sum\limits_{i=1}^{1} i^3 = \frac{1(1+1)}{2}^2$ (1 is the first element in the domain)
+\newline
+b. I will show P(1) is true\newline
+\begin{tabular}{l|r}
+$\sum\limits_{i=1}^{1} i^3 = \frac{1(1+1)}{2}^2$ & given\\
+$1^3 = \frac{1(1+1)}{2}^2$ & def of sum\\
+$1^3 = \frac{2}{2}^2$ & math\\
+$1^3 = 1^2$ & math\\
+$1 = 1$ & math\\
+\end{tabular}\newline
+Because P(1): $\sum\limits_{i=1}^{1} i^3 = \frac{1(1+1)}{2}^2$ has been shown using only mathematical equivalences, the basis step is true.\newline
+c. P(k): $\sum\limits_{i=1}^{k} i^3 = \frac{k(k+1)}{2}^2$\newline
+d. P(k) $\rightarrow$ P(k+1)\newline
+e. I will show that P(k) $\rightarrow$ P(k+1)\newline
+\begin{tabular}{l|r}
+$\sum\limits_{i=1}^{k} i^3 = \frac{k(k+1)}{2}^2$ & inductive hypotheses\\
+$\sum\limits_{i=1}^{k+1} i^3 = \frac{k(k+1)}{2}^2 + (k+1)^3$ & adding k+1th term\\
+$\sum\limits_{i=1}^{k+1} i^3 = \frac{k(k+1)}{2}^2 + k^3 + 3k^2 + 3k + 1$ & distribution / math\\
+$\sum\limits_{i=1}^{k+1} i^3 = \frac{k^4 + 2k^3 + k^2}{4} + k^3 + 3k^2 + 3k + 1$ & distribution / math\\
+$\sum\limits_{i=1}^{k+1} i^3 = \frac{k^4 + 2k^3 + k^2}{4} + \frac{4k^3 + 12k^2 + 12k + 4}{4}$ & math\\
+$\sum\limits_{i=1}^{k+1} i^3 = \frac{k^4 + 6k^3 + 13k^2 + 12k + 4}{4}$ & math\\
+$\sum\limits_{i=1}^{k+1} i^3 = \frac{k^2 + 3k + 2}{2}^2$ & math\\
+$\sum\limits_{i=1}^{k+1} i^3 = \frac{(k + 1)(k + 2)}{2}^2$ & math\\
+$\sum\limits_{i=1}^{k+1} i^3 = \frac{(k + 1)((k + 1) + 1)}{2}^2$ & math\\
+\end{tabular}\newline
+Because I started with P(k) and ended up with P(k+1) using only mathematical equivalences, P(k) $\rightarrow$ P(k+1).\newline
+f. Because the basis step is true and the inductive hypothesis is true, by the principle of mathematical induction, P(n) is true for n $\in \mathbb{Z}$
+
+\section*{5.1 \#6}
+Problem Statement:\newline
+P(n): $\sum\limits_{i=1}^{n} i*i! = (n+1)! - 1$ for n $\in \mathbb{Z}^+$\newline
+Basis step:\newline
+I will show that P(1): $1*1! = (1+1)! - 1$ is true because 1 is the first value in the domain.\newline
+\begin{tabular}{l|r}
+$1*1! = (1+1)! - 1$ & Assume P(1)\\
+$ 1 = (1+1)! -1$ & math\\
+$ 1 = 2! - 1$ & math\\
+1 = 2 - 1 & math \\ 
+1 = 1 & math\\
+\end{tabular}
+\newline
+Because P(1): $1*1! = (1+1)! - 1$ has been shown with only mathematical equivalences, the basis step is true.
+\newline
+Inductive Hypothesis:\newline
+P(k): $\sum\limits_{i=1}^{k} i*i! = (k+1)! - 1$ for k $\in \mathbb{Z}^+$\newline
+Inductive step:\newline
+I wills show that P(k) $\rightarrow$ P(k+1)\newline
+\begin{tabular}{l|r}
+$\sum\limits_{i=1}^{k} i*i! = (k+1)! - 1$ & basis step\\
+$\sum\limits_{i=1}^{k+1} i*i! = (k+1)! - 1 + (k+1)(k+1)!$ & adding the k+1th term\\
+$\sum\limits_{i=1}^{k+1} i*i! = (k+1)(k+1)! + (k+1)! - 1$ & commutative\\
+$\sum\limits_{i=1}^{k+1} i*i! = ((k+1)+1)(k+1)! - 1$ & distributive\\
+$\sum\limits_{i=1}^{k+1} i*i! = ((k+1)+1)! - 1$ & multiplication\\
+\end{tabular}\newline
+Because I started with P(k) and ended up with P(k+1) using only mathematical equivalences, P(k) $\rightarrow$ P(k+1).\newline
+Conclusion:\newline
+Because the basis step is true and the inductive hypothesis is true, by the principle of mathematical induction, P(n) is true for n $\in \mathbb{Z}^+$
+
+\section*{5.1 \#18}
+a. P(2): $2! < 2^2$ (2 is the first element in the domain)\newline
+b. I will show P(2)\newline
+\begin{tabular}{l|r}
+$2! < 2^2$ & given\\
+$2 < 2^2$& math\\
+$2 < 4$ & math\\
+\end{tabular}\newline
+I have shown P(2) is true using only mathematical equivalences. Thus the basis step is true.\newline
+c. P(k): $k! < k^k$ for k $\in \mathbb{Z} - \{1\}$ \newline
+d. P(k) $\rightarrow$ P(k+1)\newline
+e. I will show P(k) $\rightarrow$ P(k+1)\newline
+\begin{tabular}{l|r}
+$k! < k^k$ & Inductive hypothesis\\
+$k! * (k+1) < (k+1) * k^k$ & Math\\
+$(k+1)! < (k+1) * k^k$ & Math\\
+$(k+1) * k^k < (k+1) * (k+1)^k$ & Math\\
+$(k+1) * (k+1)^k = (k+1)^(k+1)$ & Math\\
+$(k+1)! = (k+1)^(k+1)$ & Transitivity\\
+\end{tabular}\newline
+Since I have shown P(k) $\rightarrow$ P(k+1) using only mathematical equivalences, the inductive step is true.\newline
+f. Since both the basis step and the inductive step are true, using the principle of mathematical induction, I have proved that P(n) for n $\in \mathbb{Z} -\{1\}$ 
+
+\section*{5.1 \#20}
+Problem Statement:\newline
+P(n): $3^n < n!$ for n $\in \mathbb{Z}$, n $>$ 6\newline
+Basis step:\newline
+I will show P(7) (7 is the first element in the domain)\newline
+\begin{tabular}{l|r}
+$3^7 < 7!$ & given \\
+$2187 < 7!$ & math\\
+$2187 < 5040$ & math\\
+\end{tabular}\newline
+I have shown P(7) using only mathematical equivalences, so the basis step is true.\newline
+Inductive hypothesis:\newline
+P(k): $3^k < k!$ for k $\in \mathbb{Z}$, k $>6$ \newline
+Inductive step:\newline
+I will prove P(k) $\rightarrow$ P(k+1)\newline
+\begin{tabular}{l|r}
+$3^k < k!$ & inductive hypothesis\\
+$3^k*(k+1) < k!*(k+1)$ & math\\
+$3 < (k+1)$ & $k>6$\\
+$3^k*3 < 3^k*(k+1) $& math\\
+$3^k*3 = 3^(k+1)$ & math\\
+$k! * (k+1) = (k+1)!$ & math\\
+$3^(k+1) < (k+1)! $&transitivity\\
+\end{tabular}
+\newline
+Because I have gotten to P(k+1) using only mathematical equivalences, P(k) $\rightarrow$ P(k+1)\newline
+Conclusion:\newline
+Because I have shown the basis step is true and the inductive step is true, by the principle of mathematical induction, P(n) for n $\in \mathbb{Z}, $n$>6$.
+
+\section*{5.1 \#44}
+Problem statement:\newline
+P(n): $(A_1 - B) \cup (A_2 - B) \cup ... \cup (A_n - B) = (A_1 \cup A_2 \cup... \cup A_n) - B$ n $\in\mathbb{Z}^+$\newline
+Basis step:\newline
+$(A_1 - B) = (A_1) - B$ \newline
+(arbitrarily true because of parentheses)\newline
+Inductive hypothesis:\newline
+P(k): $(A_1 - B) \cup (A_2 - B) \cup ... \cup (A_k - B) = (A_1 \cup A_2 \cup... \cup A_k) - B$ k $\in\mathbb{Z}^+$\newline
+Inductive step:\newline
+I will show P(k) $\rightarrow$ P(k+1)\newline
+\begin{tabular}{l|r}
+$(A_1 - B) \cup (A_2 - B) \cup ... \cup (A_k - B) = (A_1 \cup A_2 \cup... \cup A_k) - B$ & Inductive hypothesis\\
+$(A_1 - B) \cup (A_2 - B) \cup ... \cup (A_{k+1} - B) = (A_1 \cup A_2 \cup... \cup A_k) - B \cup (A_{k+1} - B)$ & adding the k+1th term to both sides\\
+$(A_1 - B) \cup (A_2 - B) \cup ... \cup (A_{k+1} - B) = (A_1 \cup A_2 \cup... \cup A_k) \cap \bar{B} \cup (A_{k+1} \cap \bar{B})$ & def of complement\\
+$(A_1 - B) \cup (A_2 - B) \cup ... \cup (A_{k+1} - B) = (A_1 \cup A_2 \cup... \cup A_{k+1}) \cap \bar{B}$ & distributive\\
+$(A_1 - B) \cup (A_2 - B) \cup ... \cup (A_{k+1} - B) = (A_1 \cup A_2 \cup... \cup A_{k+1}) - B$ & def of complement\\
+\end{tabular}\newline
+Since I have gotten to P(k+1) using only mathematical equvalences, P(k) $\rightarrow$ P(k+1)\newline
+Conclusion:\newline
+Because the basis step is true and the inductive step is true, by the principle of mathematical induction, P(n): $(A_1 - B) \cup (A_2 - B) \cup ... \cup (A_n - B) = (A_1 \cup A_2 \cup... \cup A_n) - B$ n $\in\mathbb{Z}^+$
+
+\section*{5.1 \#50}
+1. There is no formal problem statement.\newline
+2. The basis step hasn't been proven.\newline
+3. There is no inductive hypothesis.\newline
+4. No conclusion of the inductive step.\newline
+5. No final conclusion
+
+
+
+\end{document}
